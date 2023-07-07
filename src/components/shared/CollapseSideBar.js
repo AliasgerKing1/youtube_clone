@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../assets/Sidebar.css"
+import "../../assets/CollapseSideBar.css"
 import SidebarRow from './SidebarRow'
 
 import HomeIcon from "@mui/icons-material/Home"

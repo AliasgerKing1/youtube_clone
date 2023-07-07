@@ -1,7 +1,7 @@
 import React from 'react'
-import "../../assets/RecommendedVideo.css"
+import "../../assets/ExpandRecommendVideo.css"
 import VideoCard from './VideoCard'
-const RecommendedVideo = () => {
+const ExpandRecommendVideo = () => {
     return (
         <>
             <div className='recommended__videos'>
@@ -19,4 +19,4 @@ const RecommendedVideo = () => {
     )
 }
 
-export default RecommendedVideo
+export default ExpandRecommendVideo

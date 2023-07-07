@@ -9,26 +9,37 @@ import NotificationIcon from "@mui/icons-material/Notifications"
 
 import Avatar from "@mui/material/Avatar"
 import { NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import {setSidebar} from "../../Redux/Sidebar/SidebarReducer"
 const Header = () => {
+    const dispatch = useDispatch()
+    let state = useSelector(state => state.SidebarReducer)
     const [inputSearch, setInputSearch] = useState("");
     const [nonEmpty, setNonEmpty] = useState(false);
     const [extraSearchicon, setExtraSearchicon] = useState(false);
-
     let preventDefualt = () => {
         if (inputSearch.length === 0) {
-            setNonEmpty(false)
-        }
+            setNonEmpty(false);
+          } else {
+            setNonEmpty(true);
+          }
         setExtraSearchicon(true)
     }
     let NonEmptySearch = () => {
         setNonEmpty(true)
+    }
+
+    let SidebarChange = () => {
+        if(state == true) {
+           
+        }
     }
     return (
         <>
             <div className='header'>
                 <div className='header__left'>
 
-                    <MenuIcon className='pointer' />
+                    <MenuIcon className='pointer' onClick={SidebarChange}/>
                     <NavLink to="/">
                         <img className='header_logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png' alt='youtube' />
                     </NavLink>

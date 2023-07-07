@@ -4,11 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+import { configureStore,combineReducers } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import SidebarReducer from "./Redux/Sidebar/SidebarReducer"
+
+let rootReducer = combineReducers({
+SidebarReducer
+})
+let store = configureStore({
+reducer : rootReducer,
+})
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
