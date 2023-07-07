@@ -1,7 +1,7 @@
 .sidebar__row {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 3px 20px;
 }
 
 .sidebar__row__icon {
@@ -19,6 +19,7 @@
 .sidebar__row:hover {
     background-color: lightgray;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .sidebar__row:hover>.sidebar__row__icon {
@@ -35,7 +36,7 @@
 
 .sidebar__row.selected {
     background-color: lightgray;
-
+    border-radius: 15px;
 }
 
 .sidebar__row.selected>.sidebar__row__title {

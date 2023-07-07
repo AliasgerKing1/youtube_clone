@@ -1,21 +1,17 @@
 import './App.css';
-import Header from './components/shared/Header';
-import RecommendedVideo from './components/shared/RecommendedVideo';
-import SideBar from './components/shared/SideBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SearchedPage from './components/pages/SearchedPage/SearchedPage';
+import Home from './components/pages/Home/Home';
 function App() {
   return (
     <div className="App">
-      {/* Header */}
-      <Header />
-      {/* Header end */}
-      <div className='app__page'>
-        {/* Sidebar */}
-        <SideBar />
-        {/* Sidebar end */}
-        {/* Recommended videos */}
-        <RecommendedVideo />
-        {/* Recommended videos end */}
-      </div>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/search/:searchTerm' element={<SearchedPage />} />
+        </Routes>
+      </BrowserRouter>
 
     </div>
   );

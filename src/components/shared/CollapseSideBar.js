@@ -12,24 +12,24 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo'
 import WatchLaterIcon from '@mui/icons-material/WatchLater'
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-const SideBar = () => {
+const CollapseSideBar = () => {
     return (
         <>
             <div className='sidebar'>
-                <SidebarRow selected title="Home" Icon={HomeIcon} />
-                <SidebarRow title="Trending" Icon={TrendingIcon} />
-                <SidebarRow title="Subscription" Icon={SubscriptionIcon} />
-                <SidebarRow title="Shorts" Icon={ShortsIcon} />
+                <SidebarRow selected Icon={HomeIcon} />
+                <SidebarRow Icon={TrendingIcon} />
+                <SidebarRow Icon={SubscriptionIcon} />
+                <SidebarRow Icon={ShortsIcon} />
                 <hr />
-                <SidebarRow title="Library" Icon={VideoLibraryIcon} />
-                <SidebarRow title="History" Icon={HistoryIcon} />
-                <SidebarRow title="Your Videos" Icon={OndemandVideoIcon} />
-                <SidebarRow title="Watch Later" Icon={WatchLaterIcon} />
-                <SidebarRow title="Liked Videos" Icon={ThumbUpAltOutlinedIcon} />
-                <SidebarRow title="Show More" Icon={ExpandMoreIcon} />
+                <SidebarRow Icon={VideoLibraryIcon} />
+                <SidebarRow Icon={HistoryIcon} />
+                <SidebarRow Icon={OndemandVideoIcon} />
+                <SidebarRow Icon={WatchLaterIcon} />
+                <SidebarRow Icon={ThumbUpAltOutlinedIcon} />
+                <SidebarRow Icon={ExpandMoreIcon} />
             </div>
         </>
     )
 }
 
-export default SideBar
+export default CollapseSideBar
